@@ -4,8 +4,8 @@ import json
 import re
 
 # This script scrapes 1000 boy names and 100 girl names and organizes them into
-# a dictionary sorted by gender and then first letter. Names are alphabetical in 
-# category. This will be exported as a .json file to be used for the API. 
+# a dictionary sorted by gender and then first letter. Names are an alphabetical
+# list in category. This will be exported as a .json file to be used for the API. 
 # Example: baby_names_dict['GIRL']['A'][0] = "Aaliyah"
 
 boy_url = "https://www.verywellfamily.com/top-1000-baby-boy-names-2757618"
