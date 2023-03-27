@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup
 import json
 import re
 
+# This script scrapes 1000 boy names and 100 girl names and organizes them into
+# a dictionary sorted by gender and then first letter. Names are alphabetical in 
+# category. This will be exported as a .json file to be used for the API. 
+# Example: baby_names_dict['GIRL']['A'][0] = "Aaliyah"
+
 boy_url = "https://www.verywellfamily.com/top-1000-baby-boy-names-2757618"
 boy_response = requests.get(boy_url)
 
@@ -33,6 +38,9 @@ while ascii < 91:
         name = item.get_text()
         if re.match("^[A-Za-z]", name) and name[0] == chr(ascii):
             girl_names_for_letter.append(name) 
+    
+    boy_names_for_letter.sort()
+    girl_names_for_letter.sort()
 
     baby_names_dict['BOY'][chr(ascii)] = boy_names_for_letter
     baby_names_dict['GIRL'][chr(ascii)] = girl_names_for_letter
