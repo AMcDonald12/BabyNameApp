@@ -3,27 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BabyNameApp.MainPage">
 
-    <ScrollView BackgroundColor="{StaticResource Secondary}">
-        <VerticalStackLayout VerticalOptions="End">
-
-            <Label
-                Text="Name"
-                FontSize="50"
-                TextColor="White"
-                HorizontalOptions="Center"
-                HeightRequest="375"/>
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Tap For Next Name"
-                FontSize="25"
-                SemanticProperties.Hint="Gets next name and gender from API endpoint"
-                HorizontalOptions="Center"
-                HeightRequest="50"
-                WidthRequest="500"/>
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <Button x:Name="NextBtn"
+            Text="Tap to Start"
+            BackgroundColor="{StaticResource Secondary}"
+            Clicked="GetNextName"
+            SemanticProperties.Hint="Gets next name and gender from API endpoint"
+            FontSize="75"
+            HorizontalOptions="Center"
+            WidthRequest="500"/>
 
 </ContentPage>
 

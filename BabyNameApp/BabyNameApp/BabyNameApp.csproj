@@ -54,9 +54,11 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\" />
 	  <None Remove="Services\" />
+	  <None Remove="Model\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Resources\Images\" />
 	  <Folder Include="Services\" />
+	  <Folder Include="Model\" />
 	</ItemGroup>
 </Project>
